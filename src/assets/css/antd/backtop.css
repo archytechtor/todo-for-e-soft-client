@@ -1,0 +1,55 @@
+.ant-back-top {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--backtop-text);
+    font-size: var(--font-size-default);
+    font-variant: tabular-nums;
+    line-height: 1.5rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: fixed;
+    right: 6rem;
+    bottom: 3rem;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.ant-back-top:empty {
+    display: none;
+}
+
+.ant-back-top-content {
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    color: var(--backtop-text);
+    text-align: center;
+    background-color: var(--backtop-bg);
+    border-radius: var(--border-radius-xl);
+    transition: all 0.3s;
+}
+
+.ant-back-top-content:hover {
+    background-color: var(--backtop-hover-bg);
+    transition: all 0.3s;
+}
+
+.ant-back-top-icon {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .ant-back-top {
+        right: 4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ant-back-top {
+        right: 1.5rem;
+    }
+}

@@ -1,0 +1,106 @@
+.ant-divider {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--divider-text);
+    font-size: var(--font-size-default);
+    font-variant: tabular-nums;
+    line-height: 1.5rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    border-top: 1px solid var(--divider);
+}
+
+.ant-divider-vertical {
+    position: relative;
+    top: -0.06em;
+    display: inline-block;
+    height: 0.9em;
+    margin: 0 .5rem;
+    vertical-align: middle;
+    border-top: 0;
+    border-left: 1px solid var(--divider);
+}
+
+.ant-divider-horizontal {
+    display: flex;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    margin: 1.5rem 0;
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+    display: flex;
+    margin: 1rem 0;
+    color: var(--divider-header-text);
+    font-weight: 500;
+    font-size: var(--font-size-lg);
+    white-space: nowrap;
+    text-align: center;
+    border-top: 0;
+    border-top-color: var(--divider);
+}
+
+.ant-divider-horizontal.ant-divider-with-text::before,
+.ant-divider-horizontal.ant-divider-with-text::after {
+    position: relative;
+    top: 50%;
+    width: 50%;
+    border-top: 1px solid transparent;
+    border-top-color: inherit;
+    border-bottom: 0;
+    transform: translateY(50%);
+    content: '';
+}
+
+.ant-divider-horizontal.ant-divider-with-text-left::before {
+    top: 50%;
+    width: 5%;
+}
+
+.ant-divider-horizontal.ant-divider-with-text-left::after {
+    top: 50%;
+    width: 95%;
+}
+
+.ant-divider-horizontal.ant-divider-with-text-right::before {
+    top: 50%;
+    width: 95%;
+}
+
+.ant-divider-horizontal.ant-divider-with-text-right::after {
+    top: 50%;
+    width: 5%;
+}
+
+.ant-divider-inner-text {
+    display: inline-block;
+    padding: 0 1em;
+}
+
+.ant-divider-dashed {
+    background: none;
+    border-color: var(--divider);
+    border-style: dashed;
+    border-width: 1px 0 0;
+}
+
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed {
+    border-top: 0;
+}
+
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed::before,
+.ant-divider-horizontal.ant-divider-with-text.ant-divider-dashed::after {
+    border-style: dashed none none;
+}
+
+.ant-divider-vertical.ant-divider-dashed {
+    border-width: 0 0 0 1px;
+}
+
+.ant-divider-plain.ant-divider-with-text {
+    color: var(--divider-text);
+    font-weight: normal;
+    font-size: var(--font-size-default);
+}

@@ -1,0 +1,511 @@
+.ant-badge {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--badge-text);
+    font-size: var(--font-size-default);
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    display: inline-block;
+    line-height: 1rem;
+}
+
+.ant-badge-count {
+    z-index: auto;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 .375rem;
+    color: var(--badge-count-text);
+    font-weight: normal;
+    font-size: var(--font-size-sm);
+    line-height: 1.25rem;
+    white-space: nowrap;
+    text-align: center;
+    background: var(--badge-count-bg);
+    border-radius: var(--border-radius-xl);
+    box-shadow: none;
+    user-select: none;
+}
+
+.ant-badge-count a,
+.ant-badge-count a:hover {
+    color: var(--badge-count-text);
+}
+
+.ant-badge-count-sm {
+    min-width: .875rem;
+    height: .875rem;
+    padding: 0;
+    font-size: var(--font-size-sm);
+    line-height: .875rem;
+    border-radius: .875rem;
+}
+
+.ant-badge-multiple-words {
+    padding: 0 .5rem;
+}
+
+.ant-badge-dot {
+    z-index: auto;
+    width: .5rem;
+    min-width: .5rem;
+    height: .5rem;
+    background: var(--badge-dot-bg);
+    border-radius: 100%;
+    box-shadow: none;
+}
+
+.ant-badge-count,
+.ant-badge-dot,
+.ant-badge .ant-scroll-number-custom-component {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    transform-origin: 100% 0%;
+}
+
+.ant-badge-count.anticon-spin,
+.ant-badge-dot.anticon-spin,
+.ant-badge .ant-scroll-number-custom-component.anticon-spin {
+    -webkit-animation: antBadgeLoadingCircle 1s infinite linear;
+    animation: antBadgeLoadingCircle 1s infinite linear;
+}
+
+.ant-badge-status {
+    line-height: inherit;
+    vertical-align: baseline;
+}
+
+.ant-badge-status-dot {
+    position: relative;
+    top: -.125rem;
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.ant-badge-status-success {
+    background-color: var(--badge-status-success-bg);
+}
+
+.ant-badge-status-processing {
+    position: relative;
+    background-color: var(--badge-status-processing-bg);
+}
+
+.ant-badge-status-processing::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--badge-status-processing-bg);
+    border-radius: 50%;
+    -webkit-animation: antStatusProcessing 1.2s infinite ease-in-out;
+    animation: antStatusProcessing 1.2s infinite ease-in-out;
+    content: '';
+}
+
+.ant-badge-status-default {
+    background-color: var(--badge-status-default-bg);
+}
+
+.ant-badge-status-error {
+    background-color: var(--badge-status-error-bg);
+}
+
+.ant-badge-status-warning {
+    background-color: var(--badge-status-warning-bg);
+}
+
+.ant-badge-status-pink {
+    background: var(--badge-status-pink-bg);
+}
+
+.ant-badge-status-magenta {
+    background: var(--badge-status-magenta-bg);
+}
+
+.ant-badge-status-red {
+    background: var(--badge-status-red-bg);
+}
+
+.ant-badge-status-volcano {
+    background: var(--badge-status-volcano-bg);
+}
+
+.ant-badge-status-orange {
+    background: var(--badge-status-orange-bg);
+}
+
+.ant-badge-status-yellow {
+    background: var(--badge-status-yellow-bg);
+}
+
+.ant-badge-status-gold {
+    background: var(--badge-status-gold-bg);
+}
+
+.ant-badge-status-cyan {
+    background: var(--badge-status-cyan-bg);
+}
+
+.ant-badge-status-lime {
+    background: var(--badge-status-lime-bg);
+}
+
+.ant-badge-status-green {
+    background: var(--badge-status-green-bg);
+}
+
+.ant-badge-status-blue {
+    background: var(--badge-status-blue-bg);
+}
+
+.ant-badge-status-geekblue {
+    background: var(--badge-status-geekblue-bg);
+}
+
+.ant-badge-status-purple {
+    background: var(--badge-status-purple-bg);
+}
+
+.ant-badge-status-text {
+    margin-left: .75rem;
+    color: var(--badge-status-text);
+    font-size: var(--font-size-default);
+}
+
+.ant-badge-zoom-appear,
+.ant-badge-zoom-enter {
+    -webkit-animation: antZoomBadgeIn 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    animation: antZoomBadgeIn 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.ant-badge-zoom-leave {
+    -webkit-animation: antZoomBadgeOut 0.3s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+    animation: antZoomBadgeOut 0.3s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.ant-badge-not-a-wrapper .ant-badge-zoom-appear,
+.ant-badge-not-a-wrapper .ant-badge-zoom-enter {
+    -webkit-animation: antNoWrapperZoomBadgeIn 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+    animation: antNoWrapperZoomBadgeIn 0.3s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+.ant-badge-not-a-wrapper .ant-badge-zoom-leave {
+    -webkit-animation: antNoWrapperZoomBadgeOut 0.3s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+    animation: antNoWrapperZoomBadgeOut 0.3s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+}
+
+.ant-badge-not-a-wrapper:not(.ant-badge-status) {
+    vertical-align: middle;
+}
+
+.ant-badge-not-a-wrapper .ant-scroll-number-custom-component {
+    transform: none;
+}
+
+.ant-badge-not-a-wrapper .ant-scroll-number-custom-component,
+.ant-badge-not-a-wrapper .ant-scroll-number {
+    position: relative;
+    top: auto;
+    display: block;
+    transform-origin: 50% 50%;
+}
+
+.ant-badge-not-a-wrapper .ant-badge-count {
+    transform: none;
+}
+
+@-webkit-keyframes antStatusProcessing {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+@keyframes antStatusProcessing {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+.ant-scroll-number {
+    overflow: hidden;
+}
+
+.ant-scroll-number-only {
+    position: relative;
+    display: inline-block;
+    height: 1.25rem;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+}
+
+.ant-scroll-number-only > p.ant-scroll-number-only-unit {
+    height: 1.25rem;
+    margin: 0;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+}
+
+.ant-scroll-number-symbol {
+    vertical-align: top;
+}
+
+@-webkit-keyframes antZoomBadgeIn {
+    0% {
+        transform: scale(0) translate(50%, -50%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translate(50%, -50%);
+    }
+}
+
+@keyframes antZoomBadgeIn {
+    0% {
+        transform: scale(0) translate(50%, -50%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translate(50%, -50%);
+    }
+}
+
+@-webkit-keyframes antZoomBadgeOut {
+    0% {
+        transform: scale(1) translate(50%, -50%);
+    }
+    100% {
+        transform: scale(0) translate(50%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes antZoomBadgeOut {
+    0% {
+        transform: scale(1) translate(50%, -50%);
+    }
+    100% {
+        transform: scale(0) translate(50%, -50%);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes antNoWrapperZoomBadgeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes antNoWrapperZoomBadgeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes antNoWrapperZoomBadgeOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes antNoWrapperZoomBadgeOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes antBadgeLoadingCircle {
+    0% {
+        transform-origin: 50%;
+    }
+    100% {
+        transform: translate(50%, -50%) rotate(360deg);
+        transform-origin: 50%;
+    }
+}
+
+@keyframes antBadgeLoadingCircle {
+    0% {
+        transform-origin: 50%;
+    }
+    100% {
+        transform: translate(50%, -50%) rotate(360deg);
+        transform-origin: 50%;
+    }
+}
+
+.ant-ribbon-wrapper {
+    position: relative;
+}
+
+.ant-ribbon {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: var(--font-size-default);
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: absolute;
+    top: .5rem;
+    height: 1.5rem;
+    padding: 0 .5rem;
+    color: var(--ribbon-text);
+    line-height: 1.5rem;
+    white-space: nowrap;
+    background-color: var(--ribbon-bg);
+    border-radius: var(--border-radius-sm);
+}
+
+.ant-ribbon-text {
+    color: var(--ribbon-text);
+}
+
+.ant-ribbon-corner {
+    position: absolute;
+    top: 100%;
+    width: .5rem;
+    height: .5rem;
+    color: currentColor;
+    border: .25rem solid;
+    transform: scaleY(0.75);
+    transform-origin: top;
+}
+
+.ant-ribbon-corner::after {
+    position: absolute;
+    top: -.25rem;
+    left: -.25rem;
+    width: inherit;
+    height: inherit;
+    color: var(--ribbon-corner-after);
+    border: inherit;
+    content: '';
+}
+
+.ant-ribbon-color-pink {
+    color: var(--ribbon-pink-bg);
+    background: var(--ribbon-pink-bg);
+}
+
+.ant-ribbon-color-magenta {
+    color: var(--ribbon-magenta-bg);
+    background: var(--ribbon-magenta-bg);
+}
+
+.ant-ribbon-color-red {
+    color: var(--ribbon-red-bg);
+    background: var(--ribbon-red-bg);
+}
+
+.ant-ribbon-color-volcano {
+    color: var(--ribbon-volcano-bg);
+    background: var(--ribbon-volcano-bg);
+}
+
+.ant-ribbon-color-orange {
+    color: var(--ribbon-orange-bg);
+    background: var(--ribbon-orange-bg);
+}
+
+.ant-ribbon-color-yellow {
+    color: var(--ribbon-yellow-bg);
+    background: var(--ribbon-yellow-bg);
+}
+
+.ant-ribbon-color-gold {
+    color: var(--ribbon-gold-bg);
+    background: var(--ribbon-gold-bg);
+}
+
+.ant-ribbon-color-cyan {
+    color: var(--ribbon-cyan-bg);
+    background: var(--ribbon-cyan-bg);
+}
+
+.ant-ribbon-color-lime {
+    color: var(--ribbon-lime-bg);
+    background: var(--ribbon-lime-bg);
+}
+
+.ant-ribbon-color-green {
+    color: var(--ribbon-green-bg);
+    background: var(--ribbon-green-bg);
+}
+
+.ant-ribbon-color-blue {
+    color: var(--ribbon-blue-bg);
+    background: var(--ribbon-blue-bg);
+}
+
+.ant-ribbon-color-geekblue {
+    color: var(--ribbon-geekblue-bg);
+    background: var(--ribbon-geekblue-bg);
+}
+
+.ant-ribbon-color-purple {
+    color: var(--ribbon-purple-bg);
+    background: var(--ribbon-purple-bg);
+}
+
+.ant-ribbon.ant-ribbon-placement-end {
+    right: -.5rem;
+    border-bottom-right-radius: 0;
+}
+
+.ant-ribbon.ant-ribbon-placement-end .ant-ribbon-corner {
+    right: 0;
+    border-color: currentColor transparent transparent currentColor;
+}
+
+.ant-ribbon.ant-ribbon-placement-start {
+    left: -.5rem;
+    border-bottom-left-radius: 0;
+}
+
+.ant-ribbon.ant-ribbon-placement-start .ant-ribbon-corner {
+    left: 0;
+    border-color: currentColor currentColor transparent transparent;
+}
+
+.ant-badge-not-a-wrapper .ant-badge-count {
+    transform: none;
+}

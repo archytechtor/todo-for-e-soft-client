@@ -1,0 +1,135 @@
+.ant-collapse {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--collapse-text);
+    font-size: var(--font-size-default);
+    font-variant: tabular-nums;
+    line-height: 1.5rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    background-color: var(--collapse-bg);
+    border-radius: var(--border-radius-xl);
+}
+
+
+.ant-collapse > .ant-collapse-item:last-child,
+.ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+    border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    position: relative;
+    padding: .75rem 1rem;
+    color: var(--collapse-header-text);
+    line-height: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s, visibility 0s;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header::before {
+    display: table;
+    content: '';
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    display: inline-block;
+    margin-right: .75rem;
+    font-size: .75rem;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg {
+    transition: transform 0.24s;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+    float: right;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+    outline: none;
+}
+
+.ant-collapse > .ant-collapse-item .ant-collapse-header-collapsible-only {
+    cursor: default;
+}
+
+.ant-collapse > .ant-collapse-item .ant-collapse-header-collapsible-only .ant-collapse-header-text {
+    cursor: pointer;
+}
+
+.ant-collapse > .ant-collapse-item.ant-collapse-no-arrow > .ant-collapse-header {
+    padding-left: .75rem;
+}
+
+.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+    padding: .75rem 2.5rem .75rem 1rem;
+}
+
+.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    left: auto;
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+.ant-collapse-content {
+    color: var(--collapse-content-text);
+    background-color: var(--collapse-content-bg);
+}
+
+.ant-collapse-content > .ant-collapse-content-box {
+    padding: 1rem;
+}
+
+.ant-collapse-content-hidden {
+    display: none;
+}
+
+.ant-collapse-item:last-child > .ant-collapse-content {
+    border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+}
+
+.ant-collapse-borderless {
+    background-color: var(--collapse-bg);
+}
+
+.ant-collapse-borderless > .ant-collapse-item:last-child,
+.ant-collapse-borderless > .ant-collapse-item:last-child .ant-collapse-header {
+    border-radius: var(--border-radius-xl);
+}
+
+.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content {
+    background-color: transparent;
+}
+
+.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+    padding-top: .25rem;
+}
+
+.ant-collapse-ghost {
+    background-color: transparent;
+}
+
+.ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content {
+    background-color: transparent;
+}
+
+.ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.ant-collapse .ant-collapse-item-disabled > .ant-collapse-header,
+.ant-collapse .ant-collapse-item-disabled > .ant-collapse-header > .arrow {
+    color: var(--collapse-disabled-header-text);
+    cursor: not-allowed;
+}

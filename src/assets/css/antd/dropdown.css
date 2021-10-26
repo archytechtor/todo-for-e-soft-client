@@ -1,0 +1,359 @@
+.ant-dropdown-menu-item.ant-dropdown-menu-item-danger {
+    color: var(--dropdown-danger-text);
+}
+
+.ant-dropdown-menu-item.ant-dropdown-menu-item-danger:hover {
+    color: var(--dropdown-danger-hover-text);
+    background-color: var(--dropdown-danger-hover-bg);
+}
+
+.ant-dropdown {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--dropdown-text);
+    font-size: var(--font-size-sm);
+    font-variant: tabular-nums;
+    line-height: 1.5rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    z-index: 1050;
+    display: block;
+}
+
+.ant-dropdown::before {
+    position: absolute;
+    top: -.25rem;
+    right: 0;
+    bottom: -.25rem;
+    left: -.5rem;
+    z-index: -9999;
+    opacity: 0.0001;
+    content: ' ';
+}
+
+.ant-dropdown-wrap {
+    position: relative;
+}
+
+.ant-dropdown-wrap .ant-btn > .anticon-down {
+    font-size: .625rem;
+}
+
+.ant-dropdown-wrap .anticon-down::before {
+    transition: transform 0.2s;
+}
+
+.ant-dropdown-wrap-open .anticon-down::before {
+    transform: rotate(180deg);
+}
+
+.ant-dropdown-hidden,
+.ant-dropdown-menu-hidden,
+.ant-dropdown-menu-submenu-hidden {
+    display: none;
+}
+
+.ant-dropdown-show-arrow.ant-dropdown-placement-topCenter,
+.ant-dropdown-show-arrow.ant-dropdown-placement-topLeft,
+.ant-dropdown-show-arrow.ant-dropdown-placement-topRight {
+    padding-bottom: .5625rem;
+}
+
+.ant-dropdown-show-arrow.ant-dropdown-placement-bottomCenter,
+.ant-dropdown-show-arrow.ant-dropdown-placement-bottomLeft,
+.ant-dropdown-show-arrow.ant-dropdown-placement-bottomRight {
+    padding-top: .5625rem;
+}
+
+.ant-dropdown-arrow {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    background: transparent;
+    border-style: solid;
+    border-width: .25rem;
+    transform: rotate(45deg);
+}
+
+.ant-dropdown-placement-topCenter > .ant-dropdown-arrow,
+.ant-dropdown-placement-topLeft > .ant-dropdown-arrow,
+.ant-dropdown-placement-topRight > .ant-dropdown-arrow {
+    bottom: .375rem;
+    border-top-color: transparent;
+    border-right-color: var(--dropdown-arrow);
+    border-bottom-color: var(--dropdown-arrow);
+    border-left-color: transparent;
+    box-shadow: var(--dropdown-top-arrow-box-shadow);
+}
+
+.ant-dropdown-placement-topCenter > .ant-dropdown-arrow {
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.ant-dropdown-placement-topLeft > .ant-dropdown-arrow {
+    left: 1rem;
+}
+
+.ant-dropdown-placement-topRight > .ant-dropdown-arrow {
+    right: 1rem;
+}
+
+.ant-dropdown-placement-bottomCenter > .ant-dropdown-arrow,
+.ant-dropdown-placement-bottomLeft > .ant-dropdown-arrow,
+.ant-dropdown-placement-bottomRight > .ant-dropdown-arrow {
+    top: .375rem;
+    border-top-color: var(--dropdown-arrow);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: var(--dropdown-arrow);
+    box-shadow: var(--dropdown-bottom-arrow-box-shadow);
+}
+
+.ant-dropdown-placement-bottomCenter > .ant-dropdown-arrow {
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.ant-dropdown-placement-bottomLeft > .ant-dropdown-arrow {
+    left: 1rem;
+}
+
+.ant-dropdown-placement-bottomRight > .ant-dropdown-arrow {
+    right: 1rem;
+}
+
+.ant-dropdown-menu {
+    position: relative;
+    margin: 0;
+    padding: .25rem;
+    text-align: left;
+    list-style-type: none;
+    background-color: var(--dropdown-bg);
+    background-clip: padding-box;
+    border-radius: var(--border-radius-default);
+    outline: none;
+    box-shadow: var(--dropdown-box-shadow);
+}
+
+.ant-dropdown-menu-item-group-title {
+    padding: .25rem .75rem;
+    color: var(--dropdown-item-group-title-text);
+    transition: all 0.3s;
+}
+
+.ant-dropdown-menu-submenu-popup {
+    position: absolute;
+    z-index: 1050;
+    background: transparent;
+    box-shadow: none;
+    transform-origin: 0 0;
+}
+
+.ant-dropdown-menu-submenu-popup ul,
+.ant-dropdown-menu-submenu-popup li {
+    list-style: none;
+}
+
+.ant-dropdown-menu-submenu-popup ul {
+    margin-right: 0.3em;
+    margin-left: 0.3em;
+}
+
+.ant-dropdown-menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ant-dropdown-menu-item:not(:last-child) {
+    margin-bottom: .25rem;
+}
+
+.ant-dropdown-menu-item-icon {
+    min-width: .75rem;
+    margin-right: .5rem;
+    font-size: var(--font-size-xs);
+}
+
+.ant-dropdown-menu-title-content {
+    flex: auto;
+}
+
+.ant-dropdown-menu-title-content > a {
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.ant-dropdown-menu-title-content > a:hover {
+    color: inherit;
+}
+
+.ant-dropdown-menu-title-content > a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+}
+
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+    clear: both;
+    margin: 0;
+    padding: .25rem .75rem;
+    color: var(--dropdown-item-text);
+    font-weight: normal;
+    font-size: var(--font-size-sm);
+    line-height: 1.5rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: var(--border-radius-sm);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ant-dropdown-menu-item-selected,
+.ant-dropdown-menu-submenu-title-selected {
+    color: var(--dropdown-selected-item-text);
+    background-color: var(--dropdown-selected-item-bg);
+}
+
+.ant-dropdown-menu-item:not(.ant-dropdown-menu-item-selected):hover,
+.ant-dropdown-menu-submenu-title:not(.ant-dropdown-menu-submenu-title-selected):hover {
+    background-color: var(--dropdown-hover-item-bg);
+}
+
+.ant-dropdown-menu-item-disabled,
+.ant-dropdown-menu-submenu-title-disabled {
+    color: var(--dropdown-disabled-item-text);
+    cursor: not-allowed;
+}
+
+.ant-dropdown-menu-item-disabled:hover,
+.ant-dropdown-menu-submenu-title-disabled:hover {
+    color: var(--dropdown-disabled-hover-item-text);
+    background-color: var(--dropdown-disabled-hover-item-bg);
+    cursor: not-allowed;
+}
+
+.ant-dropdown-menu-item-disabled a,
+.ant-dropdown-menu-submenu-title-disabled a {
+    pointer-events: none;
+}
+
+.ant-dropdown-menu-item-divider,
+.ant-dropdown-menu-submenu-title-divider {
+    height: 1px;
+    margin: .25rem 0;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--dropdown-item-divider);
+}
+
+.ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon,
+.ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon {
+    position: absolute;
+    right: .5rem;
+}
+
+.ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,
+.ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon {
+    margin-right: 0 !important;
+    color: var(--dropdown-item-expand-icon);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+}
+
+.ant-dropdown-menu-item-group-list {
+    margin: 0 .5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.ant-dropdown-menu-submenu-title {
+    padding-right: 1.5rem;
+}
+
+.ant-dropdown-menu-submenu-vertical {
+    position: relative;
+}
+
+.ant-dropdown-menu-submenu-vertical > .ant-dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 100%;
+    margin-left: .25rem;
+    transform-origin: 0 0;
+}
+
+.ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,
+.ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon {
+    color: var(--dropdown-disabled-submenu-text);
+    background-color: var(--dropdown-disabled-submenu-bg);
+    cursor: not-allowed;
+}
+
+.ant-dropdown-menu-submenu-selected .ant-dropdown-menu-submenu-title {
+    background-color: var(--dropdown-selected-submenu-bg);
+    color: var(--dropdown-selected-submenu-text);
+}
+
+.ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomLeft,
+.ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomLeft,
+.ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomCenter,
+.ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomCenter,
+.ant-dropdown.ant-slide-down-enter.ant-slide-down-enter-active.ant-dropdown-placement-bottomRight,
+.ant-dropdown.ant-slide-down-appear.ant-slide-down-appear-active.ant-dropdown-placement-bottomRight {
+    -webkit-animation-name: antSlideUpIn;
+    animation-name: antSlideUpIn;
+}
+
+.ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topLeft,
+.ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topLeft,
+.ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topCenter,
+.ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topCenter,
+.ant-dropdown.ant-slide-up-enter.ant-slide-up-enter-active.ant-dropdown-placement-topRight,
+.ant-dropdown.ant-slide-up-appear.ant-slide-up-appear-active.ant-dropdown-placement-topRight {
+    -webkit-animation-name: antSlideDownIn;
+    animation-name: antSlideDownIn;
+}
+
+.ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomLeft,
+.ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomCenter,
+.ant-dropdown.ant-slide-down-leave.ant-slide-down-leave-active.ant-dropdown-placement-bottomRight {
+    -webkit-animation-name: antSlideUpOut;
+    animation-name: antSlideUpOut;
+}
+
+.ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topLeft,
+.ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topCenter,
+.ant-dropdown.ant-slide-up-leave.ant-slide-up-leave-active.ant-dropdown-placement-topRight {
+    -webkit-animation-name: antSlideDownOut;
+    animation-name: antSlideDownOut;
+}
+
+.ant-dropdown-trigger > .anticon.anticon-down,
+.ant-dropdown-link > .anticon.anticon-down,
+.ant-dropdown-button > .anticon.anticon-down {
+    font-size: var(--font-size-xs);
+    vertical-align: -.0625rem;
+}
+
+.ant-dropdown-button {
+    white-space: nowrap;
+}
+
+.ant-dropdown-button.ant-btn-group > .ant-btn:last-child:not(:first-child):not(.ant-btn-icon-only) {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}

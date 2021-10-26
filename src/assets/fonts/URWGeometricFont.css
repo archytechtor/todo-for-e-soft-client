@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'URW Geometric';
+    font-style: normal;
+    font-weight: 400;
+    src: local('URW Geometric Regular'),
+    local('URW-Geometric-Regular'),
+    url('URWGeometric/URWGeometric-Regular.woff2') format('woff2'),
+    url('URWGeometric/URWGeometric-Regular.woff') format('woff'),
+    url('URWGeometric/URWGeometric-Regular.ttf') format('truetype');
+}

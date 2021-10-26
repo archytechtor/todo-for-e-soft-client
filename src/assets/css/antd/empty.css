@@ -1,0 +1,83 @@
+.ant-empty {
+    margin: 0 .5rem;
+    font-size: var(--font-size-default);
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.ant-empty-image {
+    height: 100px;
+    margin-bottom: .5rem;
+}
+
+.ant-empty-image img {
+    height: 100%;
+}
+
+.ant-empty-image svg {
+    height: 100%;
+    margin: auto;
+}
+
+.ant-empty-footer {
+    margin-top: 1rem;
+}
+
+.ant-empty-normal {
+    margin: 2rem 0;
+    color: var(--empty-text);
+}
+
+.ant-empty-normal .ant-empty-image {
+    height: 2.5rem;
+}
+
+.ant-empty-small {
+    margin: .5rem 0;
+    color: var(--empty-text);
+}
+
+.ant-empty-small .ant-empty-image {
+    height: 2rem;
+}
+
+.ant-empty-img-default-ellipse {
+    fill: var(--empty-shadow);
+    fill-opacity: 0.8;
+}
+
+.ant-empty-img-default-path-1 {
+    fill: var(--empty-inside-box);
+}
+
+.ant-empty-img-default-path-2 {
+    fill: url(#linearGradient-1);
+}
+
+.ant-empty-img-default-path-3 {
+    fill: var(--empty-paper);
+}
+
+.ant-empty-img-default-path-4 {
+    fill: var(--empty-box-and-strings);
+}
+
+.ant-empty-img-default-path-5 {
+    fill: var(--empty-cloud);
+}
+
+.ant-empty-img-default-g {
+    fill: var(--empty-shapes);
+}
+
+.ant-empty-img-simple-ellipse {
+    fill: var(--empty-shadow);
+}
+
+.ant-empty-img-simple-g {
+    stroke: var(--empty-box-and-strings);
+}
+
+.ant-empty-img-simple-path {
+    fill: var(--empty-box-and-strings);
+}

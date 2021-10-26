@@ -1,0 +1,47 @@
+.text-center {
+    text-align: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.text-primary {
+    color: var(--primary)
+}
+
+.text-error {
+    color: var(--error)
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-secondary {
+    color: var(--secondary)
+}
+
+.spinner-icon-wrapper {
+    margin: -18px !important;
+}
+
+.action-row {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.pointer {
+    cursor: pointer;
+}
+

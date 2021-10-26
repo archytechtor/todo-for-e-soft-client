@@ -1,0 +1,86 @@
+.ant-anchor {
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--anchor-text);
+    font-size: var(--font-size-default);
+    font-variant: tabular-nums;
+    line-height: 1rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    padding: 0 0 0 .75rem;
+}
+
+.ant-anchor-wrapper {
+    margin-left: -.75rem;
+    padding-left: .75rem;
+    overflow: auto;
+    background-color: transparent;
+}
+
+.ant-anchor-ink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.ant-anchor-ink::before {
+    position: relative;
+    display: block;
+    width: .125rem;
+    height: 100%;
+    margin: 0 auto;
+    background-color: var(--anchor-ink-rail);
+    content: ' ';
+}
+
+.ant-anchor-ink-ball {
+    position: absolute;
+    left: 50%;
+    display: none;
+    width: .5rem;
+    height: .5rem;
+    background-color: var(--anchor-ink-ball-bg);
+    border: 2px solid var(--anchor-ink-ball-border);
+    border-radius: .5rem;
+    transform: translateX(-50%);
+    transition: top 0.3s ease-in-out;
+}
+
+.ant-anchor-ink-ball.visible {
+    display: inline-block;
+}
+
+.ant-anchor.fixed .ant-anchor-ink .ant-anchor-ink-ball {
+    display: none;
+}
+
+.ant-anchor-link {
+    padding: .5rem 0 .5rem 1rem;
+    line-height: 1rem;
+}
+
+.ant-anchor-link-title {
+    position: relative;
+    display: block;
+    margin-bottom: .5rem;
+    overflow: hidden;
+    color: var(--anchor-link-text);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all 0.3s;
+}
+
+.ant-anchor-link-title:only-child {
+    margin-bottom: 0;
+}
+
+.ant-anchor-link-active > .ant-anchor-link-title {
+    color: var(--anchor-link-text-active);
+}
+
+.ant-anchor-link .ant-anchor-link {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}

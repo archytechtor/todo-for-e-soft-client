@@ -1,0 +1,242 @@
+.ant-modal {
+    box-sizing: border-box;
+    color: var(--modal-text);
+    font-size: var(--font-size-default);
+    font-variant: tabular-nums;
+    line-height: 1.5rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    pointer-events: none;
+    position: relative;
+    top: 6.25rem;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+    margin: 0 auto;
+    padding: 0 0 1.5rem;
+}
+
+.ant-modal.ant-zoom-enter,
+.ant-modal.ant-zoom-appear {
+    transform: none;
+    opacity: 0;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ant-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: var(--modal-mask-bg);
+}
+
+.ant-modal-mask-hidden {
+    display: none;
+}
+
+.ant-modal-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ant-modal-wrap {
+    z-index: 1000;
+}
+
+.ant-modal-title {
+    margin: 0;
+    color: var(--modal-title-text);
+    font-weight: 500;
+    font-size: var(--font-size-default);
+    line-height: 1.5rem;
+    word-wrap: break-word;
+}
+
+.ant-modal-content {
+    position: relative;
+    background-color: var(--modal-bg);
+    background-clip: padding-box;
+    border: 0;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--modal-box-shadow);
+    pointer-events: auto;
+}
+
+.ant-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    color: var(--modal-close);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.ant-modal-close-x {
+    display: block;
+    width: 56px;
+    height: 56px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 56px;
+    text-align: center;
+    text-transform: none;
+    text-rendering: auto;
+}
+
+.ant-modal-close:hover {
+    color: var(--modal-close-hover);
+    text-decoration: none;
+}
+
+.ant-modal-header {
+    padding: 1rem 1.5rem;
+    color: var(--modal-header-text);
+    background: var(--modal-header-bg);
+    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+}
+
+.ant-modal-body {
+    padding: 1.5rem;
+    font-size: var(--font-size-default);
+    line-height: 1.5rem;
+    word-wrap: break-word;
+}
+
+.ant-modal-footer {
+    padding: .75rem 1rem;
+    text-align: right;
+    background: transparent;
+    border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+}
+
+.ant-modal-footer .ant-btn + .ant-btn:not(.ant-dropdown-trigger) {
+    margin-bottom: 0;
+    margin-left: .5rem;
+}
+
+.ant-modal-open {
+    overflow: hidden;
+}
+
+.ant-modal-centered {
+    text-align: center;
+}
+
+.ant-modal-centered::before {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+}
+
+.ant-modal-centered .ant-modal {
+    top: 0;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+    .ant-modal {
+        max-width: calc(100vw - 1rem);
+        margin: .5rem auto;
+    }
+
+    .ant-modal-centered .ant-modal {
+        flex: 1;
+    }
+}
+
+.ant-modal-confirm .ant-modal-header {
+    display: none;
+}
+
+.ant-modal-confirm .ant-modal-body {
+    padding: 2rem 2rem 1.5rem;
+}
+
+.ant-modal-confirm-body-wrapper::before {
+    display: table;
+    content: '';
+}
+
+.ant-modal-confirm-body-wrapper::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.ant-modal-confirm-body .ant-modal-confirm-title {
+    display: block;
+    overflow: hidden;
+    color: var(--modal-title-text);
+    font-weight: 500;
+    font-size: var(--font-size-default);
+    line-height: 1.5rem;
+}
+
+.ant-modal-confirm-body .ant-modal-confirm-content {
+    margin-top: .5rem;
+    color: var(--modal-text);
+    font-size: var(--font-size-sm);
+}
+
+.ant-modal-confirm-body > .anticon {
+    float: left;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+    margin-left: 2.5rem;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns {
+    float: right;
+    margin-top: 1.5rem;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns .ant-btn + .ant-btn {
+    margin-bottom: 0;
+    margin-left: .5rem;
+}
+
+.ant-modal-confirm-error .ant-modal-confirm-body > .anticon {
+    color: var(--modal-error-icon);
+}
+
+.ant-modal-confirm-warning .ant-modal-confirm-body > .anticon,
+.ant-modal-confirm-confirm .ant-modal-confirm-body > .anticon {
+    color: var(--modal-warning-icon);
+}
+
+.ant-modal-confirm-info .ant-modal-confirm-body > .anticon {
+    color: var(--modal-info-icon);
+}
+
+.ant-modal-confirm-success .ant-modal-confirm-body > .anticon {
+    color: var(--modal-success-icon);
+}

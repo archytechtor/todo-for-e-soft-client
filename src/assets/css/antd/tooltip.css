@@ -1,0 +1,254 @@
+.ant-tooltip {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--tooltip-text);
+    font-size: var(--font-size-sm);
+    font-variant: tabular-nums;
+    line-height: 1.5rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 16rem;
+    visibility: visible;
+}
+
+.ant-tooltip-hidden {
+    display: none;
+}
+
+.ant-tooltip-placement-top,
+.ant-tooltip-placement-topLeft,
+.ant-tooltip-placement-topRight {
+    padding-bottom: .5rem;
+}
+
+.ant-tooltip-placement-right,
+.ant-tooltip-placement-rightTop,
+.ant-tooltip-placement-rightBottom {
+    padding-left: .5rem;
+}
+
+.ant-tooltip-placement-bottom,
+.ant-tooltip-placement-bottomLeft,
+.ant-tooltip-placement-bottomRight {
+    padding-top: .5rem;
+}
+
+.ant-tooltip-placement-left,
+.ant-tooltip-placement-leftTop,
+.ant-tooltip-placement-leftBottom {
+    padding-right: .5rem;
+}
+
+.ant-tooltip-inner {
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: .5rem;
+    color: var(--tooltip-text);
+    text-align: left;
+    text-decoration: none;
+    word-wrap: break-word;
+    background-color: var(--tooltip-bg);
+    border-radius: var(--border-radius-default);
+    box-shadow: var(--tooltip-box-shadow);
+}
+
+.ant-tooltip-arrow {
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    overflow: hidden;
+    background: transparent;
+    pointer-events: none;
+}
+
+.ant-tooltip-arrow-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    margin: auto;
+    background-color: var(--tooltip-bg);
+    content: '';
+    pointer-events: auto;
+}
+
+.ant-tooltip-placement-top .ant-tooltip-arrow,
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-topRight .ant-tooltip-arrow {
+    bottom: -.375rem;
+}
+
+.ant-tooltip-placement-top .ant-tooltip-arrow-content,
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow-content,
+.ant-tooltip-placement-topRight .ant-tooltip-arrow-content {
+    box-shadow: var(--tooltip-top-box-shadow);
+    transform: translateY(-.375rem) rotate(45deg);
+}
+
+.ant-tooltip-placement-top .ant-tooltip-arrow {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow {
+    left: 1rem;
+}
+
+.ant-tooltip-placement-topRight .ant-tooltip-arrow {
+    right: 1rem;
+}
+
+.ant-tooltip-placement-right .ant-tooltip-arrow,
+.ant-tooltip-placement-rightTop .ant-tooltip-arrow,
+.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {
+    left: -.375rem;
+}
+
+.ant-tooltip-placement-right .ant-tooltip-arrow-content,
+.ant-tooltip-placement-rightTop .ant-tooltip-arrow-content,
+.ant-tooltip-placement-rightBottom .ant-tooltip-arrow-content {
+    box-shadow: var(--tooltip-right-box-shadow);
+    transform: translateX(.375rem) rotate(45deg);
+}
+
+.ant-tooltip-placement-right .ant-tooltip-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ant-tooltip-placement-rightTop .ant-tooltip-arrow {
+    top: .5rem;
+}
+
+.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {
+    bottom: .5rem;
+}
+
+.ant-tooltip-placement-left .ant-tooltip-arrow,
+.ant-tooltip-placement-leftTop .ant-tooltip-arrow,
+.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {
+    right: -.375rem;
+}
+
+.ant-tooltip-placement-left .ant-tooltip-arrow-content,
+.ant-tooltip-placement-leftTop .ant-tooltip-arrow-content,
+.ant-tooltip-placement-leftBottom .ant-tooltip-arrow-content {
+    box-shadow: var(--tooltip-left-box-shadow);
+    transform: translateX(-.375rem) rotate(45deg);
+}
+
+.ant-tooltip-placement-left .ant-tooltip-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ant-tooltip-placement-leftTop .ant-tooltip-arrow {
+    top: .5rem;
+}
+
+.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {
+    bottom: .5rem;
+}
+
+.ant-tooltip-placement-bottom .ant-tooltip-arrow,
+.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {
+    top: -.375rem;
+}
+
+.ant-tooltip-placement-bottom .ant-tooltip-arrow-content,
+.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow-content,
+.ant-tooltip-placement-bottomRight .ant-tooltip-arrow-content {
+    box-shadow: var(--tooltip-bottom-box-shadow);
+    transform: translateY(.375rem) rotate(45deg);
+}
+
+.ant-tooltip-placement-bottom .ant-tooltip-arrow {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow {
+    left: 1rem;
+}
+
+.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {
+    right: 1rem;
+}
+
+.ant-tooltip-pink .ant-tooltip-inner,
+.ant-tooltip-pink .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-pink);
+}
+
+.ant-tooltip-magenta .ant-tooltip-inner,
+.ant-tooltip-magenta .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-magenta);
+}
+
+.ant-tooltip-red .ant-tooltip-inner,
+.ant-tooltip-red .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-red);
+}
+
+.ant-tooltip-volcano .ant-tooltip-inner,
+.ant-tooltip-volcano .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-volcano);
+}
+
+.ant-tooltip-orange .ant-tooltip-inner,
+.ant-tooltip-orange .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-orange);
+}
+
+.ant-tooltip-yellow .ant-tooltip-inner,
+.ant-tooltip-yellow .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-yellow);
+}
+
+.ant-tooltip-gold .ant-tooltip-inner,
+.ant-tooltip-gold .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-gold);
+}
+
+.ant-tooltip-cyan .ant-tooltip-inner,
+.ant-tooltip-cyan .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-cyan);
+}
+
+.ant-tooltip-lime .ant-tooltip-inner,
+.ant-tooltip-lime .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-lime);
+}
+
+.ant-tooltip-green .ant-tooltip-inner,
+.ant-tooltip-green .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-green);
+}
+
+.ant-tooltip-blue .ant-tooltip-inner,
+.ant-tooltip-blue .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-blue);
+}
+
+.ant-tooltip-geekblue .ant-tooltip-inner,
+.ant-tooltip-geekblue .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-geekblue);
+}
+
+.ant-tooltip-purple .ant-tooltip-inner,
+.ant-tooltip-purple .ant-tooltip-arrow-content {
+    background-color: var(--tooltip-purple);
+}

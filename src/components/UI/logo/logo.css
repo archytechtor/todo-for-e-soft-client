@@ -1,0 +1,32 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--border-radius-xl);
+    background-color: transparent;
+    flex-shrink: 0;
+    margin: 1.5rem .5rem;
+}
+
+.logo .face {fill: #000;stroke: #000;}
+.logo:hover .face {fill: #0d0c0f;stroke: #0d0c0f;}
+.logo .ears {fill: #ccc;stroke: #ccc;}
+.logo:hover .ears {fill: #fff;stroke: #fff;}
+.logo .top-head {fill: #61626d;stroke: #61626d;}
+.logo:hover .top-head {fill: #7f818b;stroke: #7f818b;}
+.logo .mask-circuit {fill: #ccc;stroke: #ccc;}
+.logo:hover .mask-circuit {fill: #fff;stroke: #fff;}
+.logo .eyes {fill: #fff;stroke: #fff;}
+.logo:hover .eyes {fill: #f14647;stroke: #f14647;}
+.logo .nose-line {fill: #61626d;stroke: #61626d;}
+.logo:hover .nose-line {fill: #7f818b;stroke: #7f818b;}
+.logo .muzzle {fill: #ccc;stroke: #ccc;}
+.logo:hover .muzzle {fill: #fff;stroke: #fff;}
+.logo .bottom-head {fill: #61626d;stroke: #61626d;}
+.logo:hover .bottom-head {fill: #7f818b;stroke: #7f818b;}
+.logo .nose {fill: #000;stroke: #000;}
+.logo:hover .nose {fill: #0d0c0f;stroke: #0d0c0f;}
+.logo .nose-flare {fill: #fff;stroke: #fff;}
+

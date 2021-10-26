@@ -1,0 +1,151 @@
+.ant-layout {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    min-height: 0;
+    background: var(--layout-bg);
+}
+
+.ant-layout,
+.ant-layout * {
+    box-sizing: border-box;
+}
+
+.ant-layout.ant-layout-has-sider {
+    flex-direction: row;
+}
+
+.ant-layout.ant-layout-has-sider > .ant-layout,
+.ant-layout.ant-layout-has-sider > .ant-layout-content {
+    width: 0;
+}
+
+.ant-layout-header,
+.ant-layout-footer {
+    flex: 0 0 auto;
+}
+
+.ant-layout-header {
+    height: 4rem;
+    padding: 0 3.125rem;
+    color: var(--layout-header-text);
+    line-height: 4rem;
+}
+
+.ant-layout-footer {
+    padding: 1.5rem 3.125rem;
+    font-size: var(--font-size-sm);
+}
+
+.ant-layout-content {
+    flex: auto;
+    height: 100vh;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.ant-layout-content::-webkit-scrollbar {
+    display: none;
+}
+
+.ant-layout-sider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ant-layout-sider.ant-layout-sider-collapsed {
+    flex: 0 0 7rem !important;
+    width: 7rem !important;
+    min-width: 7rem !important;
+    max-width: 7rem !important;
+}
+
+.ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ant-layout-sider-has-trigger {
+    padding-bottom: 3rem;
+}
+
+.ant-layout-sider-right {
+    order: 1;
+}
+
+.ant-layout-sider-trigger {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    height: 3rem;
+    color: var(--layout-sider-trigger-text);
+    line-height: 3rem;
+    text-align: center;
+    background: var(--layout-sider-trigger-bg);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ant-layout-sider-zero-width > * {
+    overflow: hidden;
+}
+
+.ant-layout-sider-zero-width-trigger {
+    position: absolute;
+    top: 4rem;
+    right: -2.25rem;
+    z-index: 1;
+    width: 2.25rem;
+    height: 2.625rem;
+    color: var(--layout-sider-trigger-text);
+    font-size: var(--font-size-lg);
+    line-height: 2.625rem;
+    text-align: center;
+    background: var(--layout-sider-trigger-bg);
+    border-radius: 0 var(--border-radius-default) var(--border-radius-default) 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.ant-layout-sider-zero-width-trigger::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: all 0.3s;
+    content: '';
+}
+
+.ant-layout-sider-zero-width-trigger:hover::after {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ant-layout-sider-zero-width-trigger-right {
+    left: -2.25rem;
+    border-radius: var(--border-radius-default) 0 0 var(--border-radius-default);
+}
+
+.ant-layout-sider-light {
+    background: var(--layout-sider-bg);
+}
+
+.ant-layout-sider-light .ant-layout-sider-trigger {
+    color: var(--layout-sider-trigger-text);
+    background: var(--layout-sider-trigger-bg);
+}
+
+.ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
+    color: var(--layout-sider-trigger-text);
+    background: var(--layout-sider-trigger-bg);
+}

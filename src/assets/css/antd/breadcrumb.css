@@ -1,0 +1,50 @@
+.ant-breadcrumb {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-variant: tabular-nums;
+    line-height: 1.5rem;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    color: var(--breadcrumb-text);
+    font-size: var(--font-size-default);
+}
+
+.ant-breadcrumb .anticon {
+    font-size: var(--font-size-default);
+}
+
+.ant-breadcrumb a {
+    color: var(--breadcrumb-link-text);
+    transition: color 0.3s;
+}
+
+.ant-breadcrumb a:hover {
+    color: var(--breadcrumb-link-text-hover);
+}
+
+.ant-breadcrumb > span:last-child {
+    color: var(--breadcrumb-last-text);
+}
+
+.ant-breadcrumb > span:last-child a {
+    color: var(--breadcrumb-link-last-text);
+}
+
+.ant-breadcrumb > span:last-child .ant-breadcrumb-separator {
+    display: none;
+}
+
+.ant-breadcrumb-separator {
+    margin: 0 .75rem;
+    color: var(--breadcrumb-separator);
+}
+
+.ant-breadcrumb-link > .anticon + span,
+.ant-breadcrumb-link > .anticon + a {
+    margin-left: .5rem;
+}
+
+.ant-breadcrumb-overlay-link > .anticon {
+    margin-left: .5rem;
+}

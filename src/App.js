@@ -53,7 +53,7 @@ const App = observer(() => {
           {
             user.isAuth &&
             <Sider collapsed={true}>
-              <Logo className='my-5' href='https://github.com/archytechtor/todo-for-e-soft' target='__blank'/>
+              <Logo className='my-5' href='https://github.com/archytechtor' target='__blank'/>
               <NavBar/>
               <OptionsBar theme={theme} setTheme={setTheme}/>
             </Sider>
